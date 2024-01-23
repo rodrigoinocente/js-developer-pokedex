@@ -27,16 +27,24 @@
         <h1>Pokedex</h1>
 
         <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
         </ol>
-
+        </div>
+        </li>
+        </ol>
         <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
+            <button id="loadMoreButton" type="button">Load More</button>
         </div>
     </section>
+    <div class="modal-overlay" id="modalOverlay"></div>
 
+    <div class="modal" id="pokemonModal">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="modal-content">
+            <div id="modalContent">
+                <!-- Conteúdo do modal será inserido aqui -->
+            </div>
+        </div>
+    </div>
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>

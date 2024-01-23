@@ -6,6 +6,15 @@
     list-style: none;
 }
 
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 5px 0 #00000066;
+}
+
 .normal {
     background-color: #a6a877;
 }
@@ -78,25 +87,23 @@
     background-color: #f9aec7;
 }
 
-.pokemon {
+.head {
     display: flex;
-    flex-direction: column;
-    margin: .5rem;
-    padding: 1rem;
-    border-radius: 1rem;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 .pokemon .number {
     color: #000;
     opacity: .3;
-    text-align: right;
     font-size: .625rem;
 }
 
 .pokemon .name {
-    text-transform: capitalize;
     color: #fff;
     margin-bottom: .25rem;
+    text-transform: capitalize;
+    font-size: 1.2rem;
 }
 
 .pokemon .detail {
@@ -110,13 +117,14 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    width: 60%;
 }
 
 .pokemon .detail .types .type {
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: .9rem;
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
@@ -124,7 +132,8 @@
 
 .pokemon .detail img {
     max-width: 100%;
-    height: 70px;
+    height: 117px;
+    margin-top: -10px;
 }
 
 .pagination {
@@ -137,13 +146,106 @@
 }
 
 .pagination button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
     color: #fff;
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    padding: .7rem 1rem;
+    margin: .25rem 0;
+    font-size: 1rem;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* MODAL */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    z-index: 2;
+    width: 75%;
+    border-radius: 1rem;
+    max-height: 90vh;
+    max-width: 300px;
+}
+
+.modalBack {
+    border-radius: 1rem;
+}
+
+.modal-content {
+    border-radius: 1rem;
+    padding: .8rem .5rem .5rem .5rem;
+}
+
+.close {
+    color: #f71010;
+    float: right;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#nameModal {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.imgModal {
+    max-width: 200px;
+}
+
+.modalBack ol {
+    list-style: none;
+}
+
+.attribute-bar p {
+    margin: .2rem 0;
+    font-size: .825rem;
+}
+
+.attribute-bar {
+    display: flex;
+    flex-direction: column;
+    margin-top: .8rem;
+}
+
+.attribute-progress {
+    height: .8rem;
+    border-radius: 1rem;
+    width: 80%;
+    align-self: center;
+}
+
+.imgGif {
+    align-self: flex-end;
 }
 
 @media screen and (min-width: 380px) {
